@@ -1,0 +1,104 @@
+#error {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  color: #d3494e
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  cursor: pointer;
+  width: 22.531%; /* adjust the width as desired */
+  height: 400px; /* adjust the height as desired */
+  margin: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.3s;
+  display: inline-block; /* add this to make the cards side by side */
+  background-color: white; /* add a background color for the cards */
+  text-align: center; /* center the content of the cards */
+  background: linear-gradient(to bottom right, rgb(211, 113, 253), rgb(116, 75, 189));
+  /* add a gradient background color for the cards */
+  opacity: 0.8;
+}
+
+.card-title {
+  /* add styles for the title element */
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(47, 0, 128);
+  margin: 0.5em;
+  
+}
+
+.card-content {
+  /* add styles for the content element */
+  font-size: 1em;
+  margin: 1em;
+  padding: 1em; /* add padding to the content */
+  /* add a font family */
+  color: rgb(47, 0, 128);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  margin-top: 70%;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  /* center the content vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* give the content a good font weight and size */
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 40px;
+}
+
+
+.card-title {
+  /* add a transition for the visibility property */
+  transition: visibility 0.6s;
+}
+
+.card.flipped .card-title {
+  visibility: hidden; /* hide the title when the card is flipped */
+}
+
+/* add media queries for responsive design */
+@media (max-width: 1000px) {
+  .card {
+    width: 50%; /* adjust the width as desired */
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%; /* adjust the width as desired */
+  }
+}
+
+/* add styles for the card wrapper element */
+.card-answer-wrapper {
+  transform: rotateY(180deg);
+  /* add a transition for the transform property */
+  transition: transform 0.6s;
+}
